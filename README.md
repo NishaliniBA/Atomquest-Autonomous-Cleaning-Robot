@@ -1,24 +1,29 @@
-# ESP32-Based Autonomous Cleaning Robot
-### AtomQuest 2025 – Top 10 Finalist Across India
+# 🤖 AtomQuest Autonomous Cleaning Robot
 
-## 📌 Overview
-
-Floorbie is a prototype autonomous cleaning robot developed for **AtomQuest 2025**, conducted by **Atomberg Technologies**.
-
-The project demonstrates the design and implementation of an embedded autonomous mobile robot using an **ESP32 microcontroller**. The robot navigates autonomously by detecting obstacles through distance sensors and controls its movement using a differential drive mechanism.
-
-The primary objective of this project was to develop a reliable embedded control system capable of autonomous navigation while serving as a foundation for future AI-based cleaning systems.
+> **ESP32-Based Autonomous Mobile Robot**  
+> **Top 10 Finalist Across India | AtomQuest 2025 – Atomberg Technologies**
 
 ---
 
-## 🚀 Features
+## 📖 Overview
 
-- ESP32-based embedded controller
+The **AtomQuest Autonomous Cleaning Robot** is an embedded systems project developed for **AtomQuest 2025**, a national robotics competition conducted by **Atomberg Technologies**.
+
+The project focuses on designing and developing an autonomous mobile robot capable of navigating indoor environments using an **ESP32 microcontroller** and distance sensors for real-time obstacle detection and avoidance.
+
+The robot demonstrates autonomous navigation, differential drive motor control, and embedded system integration, providing a foundation for future AI-powered cleaning robots.
+
+---
+
+## ✨ Features
+
+- ESP32-based embedded control system
 - Autonomous obstacle avoidance
 - Differential drive motor control
 - Sensor-based navigation
-- Embedded C / Arduino programming
-- Prototype autonomous mobile robot
+- Real-time decision making
+- Modular hardware architecture
+- Embedded C / Arduino implementation
 
 ---
 
@@ -28,48 +33,65 @@ The primary objective of this project was to develop a reliable embedded control
 |-----------|---------|
 | ESP32 | Main Controller |
 | Ultrasonic Sensor | Obstacle Detection |
-| Motor Driver | DC Motor Control |
-| DC Geared Motors | Robot Movement |
+| Motor Driver | Motor Control |
+| DC Geared Motors | Robot Locomotion |
 | Robot Chassis | Mechanical Platform |
 | Battery Pack | Power Supply |
 
-> Update this table if your actual hardware differs.
-
 ---
 
-## 💻 Software Used
+## 💻 Software Stack
 
 - Arduino IDE
 - Embedded C
-- ESP32 Framework
+- ESP32 Arduino Framework
 
 ---
 
-## ⚙️ Working Principle
-
-1. ESP32 continuously reads data from the distance sensor.
-2. If no obstacle is detected, the robot moves forward.
-3. If an obstacle is detected within a predefined threshold:
-   - Stop
-   - Turn left or right
-   - Continue moving forward
-4. The process repeats continuously for autonomous navigation.
-
----
-
-## 📂 Repository Structure
+## ⚙️ System Workflow
 
 ```
-Floorbie/
+Power ON
+     │
+     ▼
+Read Sensor Data
+     │
+     ▼
+Obstacle Detected?
+     │
+ ┌───┴────┐
+ │        │
+No       Yes
+ │        │
+ ▼        ▼
+Move    Stop
+Forward   │
+          ▼
+    Change Direction
+          │
+          ▼
+ Continue Navigation
+```
+
+---
+
+## 📁 Repository Structure
+
+```
+atomquest-autonomous-cleaning-robot/
 
 │── README.md
 │── LICENSE
 │── .gitignore
 │
 ├── esp32_code/
+│
 ├── hardware/
+│
 ├── images/
+│
 ├── videos/
+│
 └── docs/
 ```
 
@@ -77,55 +99,73 @@ Floorbie/
 
 ## 📷 Project Images
 
-Images of the robot, hardware setup, wiring, and testing are available inside the **images/** folder.
+The **images/** directory contains:
+
+- Robot Prototype
+- Hardware Setup
+- ESP32 Controller
+- Wiring Connections
+- Testing Images
 
 ---
 
 ## 🎥 Demonstration
 
-A demonstration video is available in the **videos/** directory.
+A demonstration video of the robot is available in the **videos/** directory.
 
 ---
 
-## ⚡ Challenges
+## 🚧 Challenges Faced
 
-- Motor speed calibration
-- Sensor accuracy
-- Stable power distribution
-- Obstacle detection tuning
+- Sensor calibration
+- Motor synchronization
+- Stable power management
+- Reliable obstacle detection
 - Mechanical alignment of the robot chassis
 
 ---
 
-## 🔮 Future Enhancements
+## 🚀 Future Enhancements
 
-The following features were planned as future improvements but were **not implemented** in the current prototype:
+The following features were planned as future improvements and are **not part of the current implementation**:
 
 - Raspberry Pi integration
 - Camera-based object detection
-- YOLOv8 waste classification
+- YOLOv8-based waste classification
 - ROS2 middleware
 - LiDAR-based SLAM
 - Autonomous path planning
 - Intelligent cleaning decisions
-- Automatic charging dock
+- Automatic docking and charging
 
 ---
 
 ## 🏆 Achievement
 
-This project was developed as part of **AtomQuest 2025** conducted by **Atomberg Technologies**, where it was selected among the **Top 10 Finalists across India**.
+- **Top 10 Finalist** across India in **AtomQuest 2025**
+- Developed as part of the national robotics competition conducted by **Atomberg Technologies**
 
 ---
+
+## 👩‍💻 Authors
+
+This project was collaboratively developed by:
+
+- **Nishalini B.A.**  
+  GitHub: https://github.com/NishaliniBA
+
+- **A Athul Krishna**  
+  GitHub: https://github.com/Athull567
+
+- **Suryaprakash TSS**  
+  GitHub: https://github.com/surya4827h
+
+---
+
+## 🤝 Acknowledgement
+
+This project was developed collaboratively as part of **AtomQuest 2025**. Each team member contributed to the design, development, testing, and integration of the autonomous cleaning robot.
 
 ## 📜 License
 
-This project is released under the MIT License.
-
----
-
-## 👤 Author
-
-**Nishalini B.A.**
-
-GitHub: https://github.com/NishaliniBA
+This project is licensed under the **MIT License**.
