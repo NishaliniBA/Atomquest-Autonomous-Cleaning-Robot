@@ -17,7 +17,7 @@ Based on the sensor readings, the ESP32 generates control signals for the motor 
 The complete control loop executes continuously during operation, enabling autonomous navigation without external intervention.
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/7ebf8b86-3c63-4e33-b0ba-59b2558923be" />
 
-
+--
                                     Battery Pack
                                          │
                     ┌────────────────────┴────────────────────┐
@@ -49,8 +49,6 @@ The complete control loop executes continuously during operation, enabling auton
 Echo Signal ◀──┘         └── Trigger Pulse
                Ultrasonic Sensor
                   (HC-SR04)
-
-
 
 ---
 
@@ -169,12 +167,12 @@ The workflow is as follows:
 6. The ESP32 commands the motors to turn the robot.
 7. After changing direction, the robot resumes forward movement.
 8. This process repeats continuously.
-
+-
                    ┌────────────────────────────────────────────┐
                    │          Embedded Control Loop             │
                    └────────────────────────────────────────────┘
 
-
+-
          Ultrasonic Sensor
               │
               │ Trigger Pulse
