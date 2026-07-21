@@ -49,8 +49,7 @@ The project demonstrates embedded firmware development, sensor interfacing, moto
 
 > **Complete architecture and communication diagrams are available in the project documentation.**
 
-![System Architecture](images/system_architecture.png)
-
+![System Architecture](https://github.com/user-attachments/assets/b2aeec95-3cf3-4ef7-8f1b-b205193d00ed)
 ---
 
 ## 📂 Repository Structure
