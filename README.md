@@ -101,10 +101,14 @@ Testing
 
 ---
 
-## 👩‍💻 Authors This project was collaboratively developed by: 
- **Nishalini B.A.** GitHub: https://github.com/NishaliniBA 
- **A Athul Krishna** GitHub: https://github.com/Athull567 
+## 👩‍💻 Authors
+
+ **Nishalini B.A.** GitHub: https://github.com/NishaliniBA
+ 
+ **A Athul Krishna** GitHub: https://github.com/Athull567
+ 
  **Suryaprakash TSS** GitHub: https://github.com/surya4827h
+ 
 ---
 
 ## 🏆 Achievement
