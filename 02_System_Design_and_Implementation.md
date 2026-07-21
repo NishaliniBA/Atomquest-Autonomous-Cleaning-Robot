@@ -134,52 +134,61 @@ The workflow is as follows:
 7. After changing direction, the robot resumes forward movement.
 8. This process repeats continuously.
 -
-                   ┌────────────────────────────────────────────┐
-                   │          Embedded Control Loop             │
-                   └────────────────────────────────────────────┘
-         Ultrasonic Sensor
-              │
-              │ Trigger Pulse
-              ▼
-      Distance Measurement
-              │
-              │ Echo Pulse Width
-              ▼
-      ESP32 GPIO Input Capture
-              │
-              │
-              ▼
-   Distance Calculation Algorithm
-              │
-              ▼
-      Obstacle Detection Logic
-              │
-              ▼
-     Navigation Decision Module
-              │
-     ┌────────┴────────┐
-     │                 │
-     ▼                 ▼
- Move Forward      Obstacle Found
-     │                 │
-     │                 ▼
-     │         Stop Robot
-     │                 │
-     │                 ▼
-     │         Turn Left / Right
-     │                 │
-     └─────────┬───────┘
-               ▼
-      PWM Motor Control
-               │
-               ▼
-        L298N Driver
-               │
-               ▼
-     Left Motor / Right Motor
-               │
-               ▼
-      Robot Navigation
+```mermaid
+flowchart TD
+
+    A[Robot Powered ON]
+
+    A --> B[ESP32 Initialization]
+
+    B --> C[Initialize GPIO]
+    B --> D[Initialize Ultrasonic Sensor]
+    B --> E[Initialize PWM Outputs]
+    B --> F[Initialize Motor Driver Interface]
+
+    C --> G[Start Embedded Control Loop]
+    D --> G
+    E --> G
+    F --> G
+
+    G --> H[Send Trigger Pulse<br/>HC-SR04]
+
+    H --> I[Ultrasonic Sensor Emits Sound Wave]
+
+    I --> J[Echo Reflected From Obstacle]
+
+    J --> K[Echo Pulse Received by ESP32]
+
+    K --> L[Calculate Distance]
+
+    L --> M{Distance < Threshold?}
+
+    M -- No --> N[Generate PWM Signals]
+
+    N --> O[L298N Motor Driver]
+
+    O --> P[Left Motor]
+
+    O --> Q[Right Motor]
+
+    P --> R[Robot Moves Forward]
+
+    Q --> R
+
+    R --> G
+
+    M -- Yes --> S[Stop Motors]
+
+    S --> T[Generate Turning PWM]
+
+    T --> O
+
+    O --> U[Rotate Left / Right]
+
+    U --> V[Path Cleared]
+
+    V --> G
+```
 
 ---
 
