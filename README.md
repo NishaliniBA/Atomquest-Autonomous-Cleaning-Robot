@@ -1,46 +1,43 @@
 # 🤖 AtomQuest Autonomous Cleaning Robot
 
-> **ESP32-Based Autonomous Mobile Robot**  
-> **Top 10 Finalist Across India | AtomQuest 2025 – Atomberg Technologies**
+> **ESP32-Based Autonomous Mobile Robot**
+>
+> **🏆 Top 10 Finalist | AtomQuest 2025 | Atomberg Technologies**
 
 ---
 
-## 📖 Overview
+## 📌 Project Summary
 
-The **AtomQuest Autonomous Cleaning Robot** is an embedded systems project developed for **AtomQuest 2025**, a national robotics competition conducted by **Atomberg Technologies**.
+The AtomQuest Autonomous Cleaning Robot is an embedded autonomous mobile robot developed using an ESP32 microcontroller for real-time obstacle detection and autonomous navigation.
 
-The project focuses on designing and developing an autonomous mobile robot capable of navigating indoor environments using an **ESP32 microcontroller** and distance sensors for real-time obstacle detection and avoidance.
-
-The robot demonstrates autonomous navigation, differential drive motor control, and embedded system integration, providing a foundation for future AI-powered cleaning robots.
+The project demonstrates embedded firmware development, sensor interfacing, motor control, and hardware-software integration for autonomous robotic applications.
 
 ---
 
-## ✨ Features
+## ✨ Highlights
 
-- ESP32-based embedded control system
+- Embedded autonomous mobile robot
+- ESP32-based control system
+- Differential drive locomotion
+- Ultrasonic obstacle detection
 - Autonomous obstacle avoidance
-- Differential drive motor control
-- Sensor-based navigation
-- Real-time decision making
 - Modular hardware architecture
-- Embedded C / Arduino implementation
+- Embedded C firmware
 
 ---
 
-## 🛠 Hardware Components
+## 🛠 Hardware
 
-| Component | Purpose |
-|-----------|---------|
-| ESP32 | Main Controller |
-| Ultrasonic Sensor | Obstacle Detection |
-| Motor Driver | Motor Control |
-| DC Geared Motors | Robot Locomotion |
-| Robot Chassis | Mechanical Platform |
-| Battery Pack | Power Supply |
+- ESP32 Development Board
+- Ultrasonic Sensor
+- L298N Motor Driver
+- DC Geared Motors
+- Robot Chassis
+- Battery Pack
 
 ---
 
-## 💻 Software Stack
+## 💻 Software
 
 - Arduino IDE
 - Embedded C
@@ -48,124 +45,74 @@ The robot demonstrates autonomous navigation, differential drive motor control, 
 
 ---
 
-## ⚙️ System Workflow
+## 🏗 System Architecture
 
-```
-Power ON
-     │
-     ▼
-Read Sensor Data
-     │
-     ▼
-Obstacle Detected?
-     │
- ┌───┴────┐
- │        │
-No       Yes
- │        │
- ▼        ▼
-Move    Stop
-Forward   │
-          ▼
-    Change Direction
-          │
-          ▼
- Continue Navigation
-```
+> **Complete architecture and communication diagrams are available in the project documentation.**
+
+![System Architecture](images/system_architecture.png)
 
 ---
 
-## 📁 Repository Structure
+## 📂 Repository Structure
 
 ```
-atomquest-autonomous-cleaning-robot/
+atomquest-autonomous-cleaning-robot
 
-│── README.md
-│── LICENSE
-│── .gitignore
-│
+├── docs/
 ├── esp32_code/
-│
 ├── hardware/
-│
 ├── images/
-│
 ├── videos/
-│
-└── docs/
+├── README.md
+└── LICENSE
 ```
 
 ---
 
-## 📷 Project Images
+## 📚 Documentation
 
-The **images/** directory contains:
+The complete engineering documentation is available inside the **docs** folder.
 
-- Robot Prototype
-- Hardware Setup
-- ESP32 Controller
-- Wiring Connections
-- Testing Images
+| Document | Description |
+|----------|-------------|
+| Project Overview | Problem statement, objectives, hardware selection |
+| System Design & Implementation | Architecture, firmware, communication, implementation |
+| Future Development Roadmap | Proposed AI and robotics enhancements |
 
 ---
 
 ## 🎥 Demonstration
 
-A demonstration video of the robot is available in the **videos/** directory.
+Demo videos and testing results are available inside the **videos** directory.
 
 ---
 
-## 🚧 Challenges Faced
+## 📸 Gallery
 
-- Sensor calibration
-- Motor synchronization
-- Stable power management
-- Reliable obstacle detection
-- Mechanical alignment of the robot chassis
+> Add 4–6 images here.
+
+Robot Prototype
+
+ESP32 Hardware
+
+Circuit Connections
+
+Testing
 
 ---
 
-## 🚀 Future Enhancements
-
-The following features were planned as future improvements and are **not part of the current implementation**:
-
-- Raspberry Pi integration
-- Camera-based object detection
-- YOLOv8-based waste classification
-- ROS2 middleware
-- LiDAR-based SLAM
-- Autonomous path planning
-- Intelligent cleaning decisions
-- Automatic docking and charging
-
+## 👩‍💻 Authors This project was collaboratively developed by: 
+ **Nishalini B.A.** GitHub: https://github.com/NishaliniBA 
+ **A Athul Krishna** GitHub: https://github.com/Athull567 
+ **Suryaprakash TSS** GitHub: https://github.com/surya4827h
 ---
 
 ## 🏆 Achievement
 
-- **Top 10 Finalist** across India in **AtomQuest 2025**
-- Developed as part of the national robotics competition conducted by **Atomberg Technologies**
+Top 10 Finalist — AtomQuest 2025 conducted by Atomberg Technologies.
 
 ---
-
-## 👩‍💻 Authors
-
-This project was collaboratively developed by:
-
-- **Nishalini B.A.**  
-  GitHub: https://github.com/NishaliniBA
-
-- **A Athul Krishna**  
-  GitHub: https://github.com/Athull567
-
-- **Suryaprakash TSS**  
-  GitHub: https://github.com/surya4827h
-
----
-
-## 🤝 Acknowledgement
-
-This project was developed collaboratively as part of **AtomQuest 2025**. Each team member contributed to the design, development, testing, and integration of the autonomous cleaning robot.
 
 ## 📜 License
 
-This project is licensed under the **MIT License**.
+Licensed under the MIT License.
