@@ -17,40 +17,6 @@ Based on the sensor readings, the ESP32 generates control signals for the motor 
 The complete control loop executes continuously during operation, enabling autonomous navigation without external intervention.
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/7ebf8b86-3c63-4e33-b0ba-59b2558923be" />
 
---
-                                    Battery Pack
-                                         │
-                    ┌────────────────────┴────────────────────┐
-                    │                                         │
-                    ▼                                         ▼
-             Voltage Regulation                      Motor Power Supply
-             (5V / 3.3V)                                  (Motor VIN)
-                    │                                         │
-                    │                                         │
-                    ▼                                         ▼
-          ┌──────────────────┐                     ┌─────────────────────┐
-          │      ESP32       │<────PWM────────────▶│   Motor Driver      │
-          │                  │                     │      (L298N)         │
-          └──────────────────┘                     └─────────┬───────────┘
-               ▲         ▲                                       │
-               │         │                                       │
-               │         │                             High Current Output
-               │         │                                       │
-               │         │                                       ▼
-               │         │                          ┌────────────────────────┐
-               │         │                          │ Left & Right DC Motors │
-               │         │                          └────────────┬───────────┘
-               │         │                                       │
-               │         │                                       ▼
-               │         │                               Robot Movement
-               │         │
-               │         │
-               │         │
-Echo Signal ◀──┘         └── Trigger Pulse
-               Ultrasonic Sensor
-                  (HC-SR04)
-
----
 
 # Hardware Architecture
 
@@ -171,8 +137,6 @@ The workflow is as follows:
                    ┌────────────────────────────────────────────┐
                    │          Embedded Control Loop             │
                    └────────────────────────────────────────────┘
-
--
          Ultrasonic Sensor
               │
               │ Trigger Pulse
@@ -221,48 +185,27 @@ The workflow is as follows:
 
 # Signal Flow
 
-Obstacle
-
-↓
-
-Ultrasonic Wave
-
-↓
-
-Echo Pulse
-
-↓
-
-GPIO Capture
-
-↓
-
-Distance Computation
-
-↓
-
-Decision Algorithm
-
-↓
-
-Motor Command Generation
-
-↓
-
-PWM Output
-
-↓
-
-Motor Driver
-
-↓
-
-Wheel Rotation
-
-↓
-
-Robot Movement
-
+           Obstacle
+              ↓
+        Ultrasonic Wave
+              ↓
+         Echo Pulse
+              ↓
+        GPIO Capture
+              ↓
+      Distance Computation
+              ↓
+        Decision Algorithm
+              ↓
+    Motor Command Generation
+              ↓
+          PWM Output
+              ↓
+        Motor Driver
+              ↓
+        Wheel Rotation
+              ↓
+       Robot Movement
 ---
 
 # Testing Procedure
